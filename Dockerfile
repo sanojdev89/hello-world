@@ -1,4 +1,5 @@
-FROM openjdk:9-jre
+FROM ubuntu:15.04
+apt-get install -y openjdk-8-jdk && \
 VOLUME /tmp
 ARG DEPENDENCY=target/dependency
 COPY ${DEPENDENCY}/BOOT-INF/lib /app/lib
