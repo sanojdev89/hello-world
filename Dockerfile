@@ -1,4 +1,5 @@
 FROM ubuntu:15.04
+RUN apt-get -y update
 RUN apt-get install -y openjdk-8-jdk
 VOLUME /tmp
 ARG DEPENDENCY=target/dependency
