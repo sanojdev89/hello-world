@@ -1,6 +1,7 @@
 FROM ubuntu:15.04
-RUN apt-get -y update
-RUN apt-get install -y openjdk-8-jdk
+RUN \
+  apt-get update && \
+  apt-get install -y oracle-java8 
 VOLUME /tmp
 ARG DEPENDENCY=target/dependency
 COPY ${DEPENDENCY}/BOOT-INF/lib /app/lib
