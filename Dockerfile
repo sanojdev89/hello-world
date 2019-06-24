@@ -1,4 +1,4 @@
-FROM ubuntu:15.04
+FROM alpine:latest
 apt-get install -y openjdk-8-jdk && \
 VOLUME /tmp
 ARG DEPENDENCY=target/dependency
